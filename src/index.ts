@@ -2,6 +2,7 @@ require( 'dotenv' ).load();
 
 import Create from './create';
 import Delete from './delete';
+import FrontPage from './frontPage';
 import Get from './get';
 import List from './list';
 import Update from './update';
@@ -24,6 +25,13 @@ export const del = ( courseId: number, page: IPage|string ): Promise < IPage > =
   return Delete( courseId, pageUrl );
 
 };
+
+export const frontPage = ( courseId: number ): Promise < IPage > => {
+
+  validate();
+  return FrontPage( courseId );
+
+}
 
 export const get = ( courseId: number, pageUrl: string ): Promise < IPage > => {
 
