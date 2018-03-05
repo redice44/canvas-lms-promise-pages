@@ -2,12 +2,12 @@ import * as req from 'request-promise-native';
 
 import { IPageReq, IPage } from './interfaces';
 
-export default async ( courseId: number, page: IPageReq ): Promise < IPage > =>
+export default async ( courseId: number, pageUrl: string, page: IPageReq ): Promise < IPage > =>
 
   req( {
 
-    method: 'POST',
-    uri: `${ process.env.CANVAS_DOMAIN }api/v1/courses/${ courseId }/pages`,
+    method: 'PUT',
+    uri: `${ process.env.CANVAS_DOMAIN }api/v1/courses/${ courseId }/pages/${ pageUrl }`,
     headers: {
 
       'Authorization': `Bearer ${ process.env.CANVAS_TOKEN }`
@@ -20,4 +20,4 @@ export default async ( courseId: number, page: IPageReq ): Promise < IPage > =>
     },
     json: true
 
-  } )
+  } );

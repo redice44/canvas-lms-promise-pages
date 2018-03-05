@@ -1,0 +1,28 @@
+import { IPage, IPageReq } from '../interfaces';
+
+export const validate = (): void => {
+
+  if ( !process.env.CANVAS_TOKEN ) {
+
+    throw new Error( `Missing Token` );
+
+  }
+
+  if ( !process.env.CANVAS_DOMAIN ) {
+
+    throw new Error( `Missing Canvas's Domain` );
+
+  }
+
+};
+
+export const pageToReq = ( page: IPage ): IPageReq => ( {
+
+  title: page.title,
+  body: page.body,
+  editing_roles: page.editing_roles,
+  notify_of_update: false,
+  published: page.published,
+  front_page: page.front_page
+
+} );

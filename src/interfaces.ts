@@ -2,7 +2,21 @@ export interface IPage {
 
   url: string;
   title: string;
-
+  created_at: string;
+  updated_at: string;
+  editing_roles: string;
+  last_edited_by?: {
+    id: number;
+    display_name: string;
+    avatar_image_url: string;
+    html_url: string;
+  };
+  body: string;
+  published: boolean;
+  front_page: boolean;
+  locked_for_user: boolean;
+  lock_info?: string;
+  lock_explanation?: string;
 
 }
 
