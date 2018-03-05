@@ -1,3 +1,5 @@
+require( 'dotenv' ).load();
+
 import * as api from '../index.js';
 
 import { IPage } from '../interfaces';

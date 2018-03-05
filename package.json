@@ -6,6 +6,8 @@
   "scripts": {
     "build": "tsc",
     "clean": "find ./src -type f -name '*.js' -delete && find ./src -type f -name '*.js.map' -delete",
+    "clean-dist": "rm -rf ./dist",
+    "dist": "npm run build && mkdir -p ./dist && cp -r ./src/* ./dist/ && find ./dist -type f -name '*.ts' -delete && find ./dist -type f -name '*.js.map' -delete && find ./dist -type d -name '__tests__' -exec rm -r {} +",
     "test": "jest",
     "watch": "tsc -w"
   },
@@ -13,13 +15,13 @@
   "author": "Matt Thomson <mthomson.lee@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^5.0.1",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
   },
   "devDependencies": {
     "@types/jest": "^22.1.4",
     "@types/node": "^9.4.6",
+    "dotenv": "^5.0.1",
     "jest": "^22.4.2",
     "typescript": "^2.7.2"
   },

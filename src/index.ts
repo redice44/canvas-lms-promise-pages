@@ -1,5 +1,3 @@
-require( 'dotenv' ).load();
-
 import Create from './create';
 import Delete from './delete';
 import FrontPage from './frontPage';
