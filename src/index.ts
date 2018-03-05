@@ -1,6 +1,7 @@
 require( 'dotenv' ).load();
 
 import Create from './create';
+import Delete from './delete';
 import Get from './get';
 import List from './list';
 import Update from './update';
@@ -13,6 +14,14 @@ export const create = ( courseId: number, page: IPageReq ): Promise < IPage > =>
 
   validate();
   return Create( courseId, page );
+
+};
+
+export const del = ( courseId: number, page: IPage|string ): Promise < IPage > => {
+
+  validate();
+  const pageUrl = typeof page === 'string' ? page : page.url;
+  return Delete( courseId, pageUrl );
 
 };
 
