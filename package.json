@@ -1,0 +1,39 @@
+{
+  "name": "@redice44/canvas-lms-promise-pages",
+  "version": "0.0.1",
+  "description": "Promise driven driver for Cavnas LMS Pages's REST API.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "find ./src -type f -name '*.js' -delete && find ./src -type f -name '*.js.map' -delete",
+    "test": "jest",
+    "watch": "tsc -w"
+  },
+  "keywords": [],
+  "author": "Matt Thomson <mthomson.lee@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.4",
+    "@types/node": "^9.4.6",
+    "jest": "^22.4.2",
+    "typescript": "^2.7.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.(ts|tsx)"
+    ]
+  }
+}
