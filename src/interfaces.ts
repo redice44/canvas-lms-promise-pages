@@ -30,3 +30,12 @@ export interface IPageReq {
   front_page?: boolean;
 
 }
+
+export interface ListOpts {
+
+  sort?: "title"|"created_at"|"updated_at";
+  order?: "asc"|"dec";
+  search_term?: string;
+  published?: boolean;
+
+}
