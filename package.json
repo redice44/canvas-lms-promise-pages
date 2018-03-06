@@ -2,7 +2,7 @@
   "name": "@redice44/canvas-lms-promise-pages",
   "version": "0.0.1",
   "description": "Promise driven driver for Cavnas LMS Pages's REST API.",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "clean": "find ./src -type f -name '*.js' -delete && find ./src -type f -name '*.js.map' -delete",
