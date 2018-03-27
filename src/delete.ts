@@ -13,6 +13,7 @@ export default async ( courseId: number, pageUrl: string ): Promise < IPage > =>
       'Authorization': `Bearer ${ process.env.CANVAS_TOKEN }`
 
     },
-    json: true
+    json: true,
+    resolveWithFullResponse: true
 
   } );

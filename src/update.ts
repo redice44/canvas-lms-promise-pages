@@ -18,6 +18,7 @@ export default async ( courseId: number, pageUrl: string, page: IPageReq ): Prom
       wiki_page: page
 
     },
-    json: true
+    json: true,
+    resolveWithFullResponse: true
 
   } );

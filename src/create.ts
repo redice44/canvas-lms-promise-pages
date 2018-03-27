@@ -18,6 +18,7 @@ export default async ( courseId: number, page: IPageReq ): Promise < IPage > =>
       wiki_page: page
 
     },
-    json: true
+    json: true,
+    resolveWithFullResponse: true
 
   } )

@@ -33,6 +33,7 @@ export interface IPageReq {
 
 export interface ListOpts {
 
+  per_page?: number;
   sort?: "title"|"created_at"|"updated_at";
   order?: "asc"|"dec";
   search_term?: string;

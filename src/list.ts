@@ -7,6 +7,12 @@ export default async ( courseId: number, opts?: ListOpts ): Promise < IPage[] > 
   let uri = `${ process.env.CANVAS_DOMAIN }api/v1/courses/${ courseId }/pages`;
   const params = [];
 
+  if ( opts.per_page ) {
+
+    params.push( `per_page=${ opts.per_page }` );
+
+  }
+
   if ( opts.sort ) {
 
     params.push( `sort=${ opts.sort }` );
@@ -40,7 +46,8 @@ export default async ( courseId: number, opts?: ListOpts ): Promise < IPage[] > 
       'Authorization': `Bearer ${ process.env.CANVAS_TOKEN }`
 
     },
-    json: true
+    json: true,
+    resolveWithFullResponse: true
 
   } );
 
