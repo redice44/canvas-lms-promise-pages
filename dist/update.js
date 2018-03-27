@@ -19,7 +19,8 @@ exports.default = (courseId, pageUrl, page) => __awaiter(this, void 0, void 0, f
         body: {
             wiki_page: page
         },
-        json: true
+        json: true,
+        resolveWithFullResponse: true
     });
 });
 //# sourceMappingURL=update.js.map

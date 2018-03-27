@@ -19,7 +19,8 @@ exports.default = (courseId, page) => __awaiter(this, void 0, void 0, function* 
         body: {
             wiki_page: page
         },
-        json: true
+        json: true,
+        resolveWithFullResponse: true
     });
 });
 //# sourceMappingURL=create.js.map

@@ -16,7 +16,8 @@ exports.default = (courseId, pageUrl) => __awaiter(this, void 0, void 0, functio
         headers: {
             'Authorization': `Bearer ${process.env.CANVAS_TOKEN}`
         },
-        json: true
+        json: true,
+        resolveWithFullResponse: true
     });
 });
 //# sourceMappingURL=get.js.map

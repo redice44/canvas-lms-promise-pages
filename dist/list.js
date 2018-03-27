@@ -12,6 +12,9 @@ const req = require("request-promise-native");
 exports.default = (courseId, opts) => __awaiter(this, void 0, void 0, function* () {
     let uri = `${process.env.CANVAS_DOMAIN}api/v1/courses/${courseId}/pages`;
     const params = [];
+    if (opts.per_page) {
+        params.push(`per_page=${opts.per_page}`);
+    }
     if (opts.sort) {
         params.push(`sort=${opts.sort}`);
     }
@@ -30,7 +33,8 @@ exports.default = (courseId, opts) => __awaiter(this, void 0, void 0, function* 
         headers: {
             'Authorization': `Bearer ${process.env.CANVAS_TOKEN}`
         },
-        json: true
+        json: true,
+        resolveWithFullResponse: true
     });
 });
 //# sourceMappingURL=list.js.map

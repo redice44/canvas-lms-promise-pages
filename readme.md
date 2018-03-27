@@ -5,7 +5,7 @@ Promise driven driver for Cavnas LMS Pages's REST API.
 # Setup
 
 ```
-$ npm i @redice44/canvas-lms-promise-pages
+$ npm i https://github.com/redice44/canvas-lms-promise-pages.git
 ```
 
 ### Node Environment Variables
@@ -17,12 +17,12 @@ CANVAS_TOKEN=YOUR_CANVAS_API_TOKEN
 
 # API
 
-- [page.create( courseId, page )](#page-create)
-- [page.del( courseId, page )](#page-del)
-- [page.frontPage( courseId )](#page-frontpage)
-- [page.get( courseId, pageUrl )](#page-get)
-- [page.list( courseId, options )](#page-list)
-- [page.update( courseId, page )](#page-update)
+- [page.create( courseId, page )](#page-create-courseid-page-)
+- [page.del( courseId, page )](#page-del-courseid-page-)
+- [page.frontPage( courseId )](#page-frontpage-courseid-)
+- [page.get( courseId, pageUrl )](#page-get-courseid-pageurl-)
+- [page.list( courseId, options )](#page-list-courseid-options-)
+- [page.update( courseId, page )](#page-update-courseid-page-)
 
 ---
 
@@ -93,6 +93,7 @@ CANVAS_TOKEN=YOUR_CANVAS_API_TOKEN
 
 ### List Options
 
+- `per_page` <[number]> number of results to return
 - `sort` title | created_at | updated_at
 - `order` asc | dec
 - `search_term` <[string]>
